@@ -1,0 +1,17 @@
+{
+  "name": "chatapprd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "concurrently --kill-others \"nodemon app\"  \"browser-sync start --proxy 'localhost:5050' --files 'chat.html' 'index.html' 'public' \"",
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "SIR STONK",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.1.0"
+  }
+}
