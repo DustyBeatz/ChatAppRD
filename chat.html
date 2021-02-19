@@ -8,22 +8,22 @@
 </head>
 <body>
     <main id="app">
-
-        <a href="/">Go back</a>
+        <div class="back">
+        <a  href="/">Go back</a>
         <h2>This is my AWESOME chat app </h2>
-
+        <p> Say what ever you like! Be nice!</p>
+            </div>
         <!--Vue custom message goes here-->
 
         <section class="messages">
             <ul id="messages" v-for="message in messages">
-                <newmessage msg:="message"></newmessage>
+                <newmessage :msg="message" :socketid="socketID"></newmessage>
             </ul>
         </section>
-        <p> Say what ever you like! Be nice!</p>
 
         <section class="message-wrapper">
-            <textarea v-model="message" class="text-message"></textarea>
-            <input @click.prevent="dispatchMessage" id="send" type="submit" value="send">
+            <textarea v-on:keyup.enter="dispatchMessage" v-model="message" class="text-message"></textarea>
+            <input @click.prevent="dispatchMessage"  id="send" type="submit" value="send">
         </section>
 
     </main>

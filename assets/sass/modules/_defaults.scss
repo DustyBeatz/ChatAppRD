@@ -24,23 +24,55 @@ a:hover {
     color: orange;
 }
 
+
 #send{
     background: $main-font-color;
     padding: 10px;
-    display: block;
     font-size: 15px;
     font-family: $font-family;
+    float: right;
 }
 
+.new-message {
+    padding: 10px;
+    background-color: gray;
+    border-radius: 8px;
+    float: left;
+    clear: both;
+}
+
+.my-message {
+    background-color: ivory;
+    float: right;
+}
 
 textarea {
-    width: 100%;
+    width: 90%;
     height: 200px;
+    float: left;
+ 
 }
 
-@media all and (min-width:900px){
-textarea {
-    width: 50%;
+.messages{
+    width: 90%;
+    height: 80%;
+    overflow: auto;
+    padding-top: 100px;
+
 }
 
+.message-wrapper{
+    position: fixed;
+    bottom: 20px;
+    height: 20px;
+    width: 90%;
+}
+
+.back
+{
+
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
 }
